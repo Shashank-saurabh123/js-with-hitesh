@@ -36,3 +36,24 @@ const myFunction = function(){ // (function object)
 console.log( typeof (myObj)) // output is :object 
 
 //******************that's it************************
+
+// stack(primitive),{it makes a copy} Heap(Non primitive){it goes to reference}
+
+let myYoutubename= "shashanksaurabh.com"
+let anotherName= "Kumar.com"
+console.log(myYoutubename);
+console.log(anotherName);
+
+let userOne={
+    email:"saurabh@gmail.com",
+    upi: "user@bl"
+}
+let userTwo=userOne;// it does not make copy ,it directly point to reference
+userTwo.email= "Shashank@gmail.com"
+// let userTwo={
+//     email: "Shashank@gmail.com"
+// }
+console.log(userOne.email)
+console.log(userTwo.email)
+
+
