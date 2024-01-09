@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayShashank=function(){
+        console.log("Shashank saurabh");
+    }
+    setTimeout(sayShashank,2000)// only reference of function is required dont execute the function itself
+
+
+
+   const h1Change= function(){
+    //console.log( document.querySelector('h1').innerHTML="best JS Series");// it's just for printing in console 
+    document.querySelector('h1').innerHTML="best JS Series"
+   }
+  // document.querySelector('h1').innerHTML="best JS Series"
+// ASSIGNMENT 
+// nned to make "best JS Series" this text after 2 sec
+const changeMe=setTimeout(h1Change,2000)
+//clearTimeout(changeMe)// it's not sound good,now we want to call this function on an event
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(changeMe)
+    console.log("STOPPED");
+})
+
+
+</script>
+</html>
