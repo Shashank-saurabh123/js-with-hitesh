@@ -36,7 +36,61 @@ buttons.forEach(function(button){
 
 ```
 
+## project 2 solution...
+// not able to do last part need the knowledge of good html
+```
+javascript
 
+// here event is subbmit type not a click type
+const form=document.querySelector('form')
+// this usecase will give empty value,we need to hold input when we submit the button
+//const height=parseInt(document.querySelector('#height').value)
+
+
+
+// whenever form submits it happens via two type either by POST or by GET, but whenever it subbmits form's value went to URL or server ,hence we need to block this process,because we are not sending on server//
+
+form.addEventListener('submit',function(e){
+  e.preventDefault()// preventing its default nature
+const height=parseInt(document.querySelector('#height').value)
+const weight=parseInt(document.querySelector('#weight').value)
+const results=(document.querySelector('#results'))
+if(height===' ' || height<0 || isNaN(height))
+{
+ results.innerHTML=`please give a valid height ${height}`;
+}
+
+// for weight
+else if(weight===' ' || weight<0 || isNaN(weight))
+{
+ results.innerHTML=`please give a valid weight ${weight}`;
+}
+else
+{
+ const bmi= (weight/((height*height)/10000)).toFixed(2);
+ //show the result
+ 
+  results.innerHTML=`<span>${bmi}</span>`
+
+  // if(bmi<18.6)
+  // {
+  //   results.innerHTML="Under Weight" 
+
+  // }
+  // if(bmi>18.6 && bmi<24.9)
+  // {
+  //   results.innerHTML="Normal Range" 
+  // }
+  // if(bmi>24.9 )
+  // {
+    
+  // }
+
+}
+})
+
+
+```
 
 
 
