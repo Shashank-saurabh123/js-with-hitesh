@@ -80,6 +80,8 @@ async function consumePromiseFive(){
     console.log(error);
  }
 }
+consumePromiseFive();
+
 
 // async function getAllUsers(){
 //     try {
@@ -100,28 +102,6 @@ fetch('https://api.github.com/users/hiteshchoudhary')
     console.log(data);
 })
 .catch((error) => console.log(error))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-consumePromiseFive();
 
 
 
